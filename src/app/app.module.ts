@@ -12,6 +12,11 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatSelectModule } from "@angular/material/select";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { LoginCardModalComponent } from './components/login-card-modal/login-card-modal.component';
+import { MatCardModule } from "@angular/material/card";
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatInputModule } from "@angular/material/input";
 export const MATERIAL_MODULES = [
   MatToolbarModule,
   MatButtonModule,
@@ -19,18 +24,23 @@ export const MATERIAL_MODULES = [
   MatMenuModule,
   MatSelectModule,
   MatFormFieldModule,
+  MatDialogModule
 ]
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     HeaderComponent,
+    LoginCardModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MATERIAL_MODULES
+    MATERIAL_MODULES,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
