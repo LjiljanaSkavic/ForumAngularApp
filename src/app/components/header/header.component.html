@@ -1,0 +1,21 @@
+<mat-toolbar class="header-wrapper">
+  <div class="header-wrapper__left">
+  <mat-icon>forum</mat-icon>
+  <span class="header-title">Diskutarium</span>
+
+  <mat-form-field class="category-wrapper">
+    <mat-label>Category</mat-label>
+    <mat-select>
+    <mat-option *ngFor="let category of categories"
+                [value]="category.value">
+      {{ category.name }}
+    </mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
+  <div class="header-wrapper__right">
+  <button mat-button>Login</button>
+  <button mat-raised-button color="accent">Sign Up</button>
+  </div>
+</mat-toolbar>
