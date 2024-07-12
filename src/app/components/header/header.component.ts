@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CATEGORIES } from "../../constants/categories";
 import { LoginCardModalComponent } from "../login-card-modal/login-card-modal.component";
 import { MatDialog } from "@angular/material/dialog";
+import { SignUpModalComponent } from "../sign-up-modal/sign-up-modal.component";
 
 @Component({
   selector: 'app-header',
@@ -22,7 +23,10 @@ export class HeaderComponent {
     }).afterClosed().subscribe();
   }
 
-  onSignUpClick() {
-
+  onSignUpClick(): void {
+    this.dialog.open(SignUpModalComponent, {
+      hasBackdrop: true,
+      backdropClass: 'forum-app-backdrop'
+    }).afterClosed().subscribe();
   }
 }

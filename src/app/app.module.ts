@@ -17,6 +17,7 @@ import { MatCardModule } from "@angular/material/card";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatInputModule } from "@angular/material/input";
+import { SignUpModalComponent } from './components/sign-up-modal/sign-up-modal.component';
 export const MATERIAL_MODULES = [
   MatToolbarModule,
   MatButtonModule,
@@ -32,6 +33,7 @@ export const MATERIAL_MODULES = [
     HomePageComponent,
     HeaderComponent,
     LoginCardModalComponent,
+    SignUpModalComponent,
   ],
   imports: [
     BrowserModule,

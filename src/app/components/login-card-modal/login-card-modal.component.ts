@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from "rxjs";
 import { FormControl, FormGroup, UntypedFormBuilder, Validators } from "@angular/forms";
 import { MatDialog, MatDialogRef } from "@angular/material/dialog";
+import { SignUpModalComponent } from "../sign-up-modal/sign-up-modal.component";
 
 @Component({
   selector: 'app-login-card-modal',
@@ -45,11 +46,14 @@ export class LoginCardModalComponent implements OnInit, OnDestroy{
   }
 
   onSignUpClick($event: MouseEvent): void {
-
+    this._dialogRef.close();
+    this.dialog.open(SignUpModalComponent, {
+      hasBackdrop: true,
+      backdropClass: 'forum-app-backdrop'
+    }).afterClosed().subscribe();
   }
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
   }
-
 }
