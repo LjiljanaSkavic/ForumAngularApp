@@ -18,6 +18,8 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatInputModule } from "@angular/material/input";
 import { SignUpModalComponent } from './components/sign-up-modal/sign-up-modal.component';
+import { ForumListComponent } from './components/forum-list/forum-list.component';
+import { ForumPostCardComponent } from './components/forum-post-card/forum-post-card.component';
 export const MATERIAL_MODULES = [
   MatToolbarModule,
   MatButtonModule,
@@ -34,6 +36,8 @@ export const MATERIAL_MODULES = [
     HeaderComponent,
     LoginCardModalComponent,
     SignUpModalComponent,
+    ForumListComponent,
+    ForumPostCardComponent,
   ],
   imports: [
     BrowserModule,
